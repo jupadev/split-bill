@@ -1,9 +1,11 @@
 <script setup>
+import SplitBillView from './components/SplitBillView.vue';
+
 </script>
 
 <template>
   <main>
-    hi
+    <SplitBillView />
   </main>
 </template>
 
