@@ -19,16 +19,48 @@ const handleSubmit = () => {
 <template>
   <Form action="" @submit.prevent="handleSubmit" class="container">
     <div class="input-container">
-      <label for="total">Total</label>
-      <input id="total" name="total" min="0" type="number" required v-model="total" class="input" />
+      <label for="total" class="input-label">Total</label>
+      <div class="input-wrapper">
+        <input
+          id="total"
+          name="total"
+          min="0"
+          type="number"
+          required
+          v-model="total"
+          class="input"
+        />
+      </div>
     </div>
     <div class="input-container">
-      <label for="tip">Tip %</label>
-      <input id="tip" name="tip" type="number" min="0" max="100" required v-model="tip" class="input" />
+      <label for="tip" class="input-label">Tip %</label>
+      <div class="input-wrapper">
+        <input
+          id="tip"
+          name="tip"
+          type="number"
+          min="0"
+          max="100"
+          required
+          v-model="tip"
+          class="input"
+        />
+      </div>
     </div>
     <div class="input-container">
-      <label for="people">Amount of people</label>
-      <input id="people" name="people" min="0" max="100" type="number" required v-model="people" class="input" />
+      <label for="people" class="input-label">Amount of people</label>
+      <div class="input-wrapper">
+        <input
+          id="people"
+          name="people"
+          min="0"
+          max="100"
+          type="number"
+          required
+          v-model="people"
+          class="input"
+        />
+      </div>
     </div>
     <div>
       <button type="submit" class="form-button">Calculate</button>
@@ -59,12 +91,21 @@ const handleSubmit = () => {
   display: flex;
   gap: 15px;
   align-items: center;
-  width: 100%
+  width: 100%;
 }
 
+.input-label {
+  flex: 1;
+  text-align: right;
+}
+
+.input-wrapper {
+  flex: 2;
+}
 .input {
   height: 2rem;
   font-size: 1rem;
   padding: 0 5px;
+  width: 150px;
 }
 </style>

@@ -39,3 +39,8 @@ npm run test:unit
 ```sh
 npm run lint
 ```
+
+
+## Live demo
+
+[split-bill demo](https://split-bill-pi.vercel.app/)
