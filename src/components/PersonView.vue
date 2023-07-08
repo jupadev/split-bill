@@ -25,7 +25,7 @@ const handleChangePaid = (event) => {
   </div>
 </template>
 
-<style scoped?>
+<style scoped>
 .person {
   border-radius: 10px;
   border: 3px solid #ccc;

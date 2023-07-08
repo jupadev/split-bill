@@ -15,7 +15,7 @@ const props = defineProps(['title', 'value'])
   </div>
 </template>
 
-<style scoped?>
+<style scoped>
 .title {
   font-weight: bolder;
 }
