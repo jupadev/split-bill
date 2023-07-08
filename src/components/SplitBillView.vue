@@ -10,4 +10,10 @@ import PeopleView from './PeopleView.vue'
   </div>
 </template>
 
-<style scoped?></style>
+<style scoped>
+.container {
+  display: flex;
+  gap: 10px;
+  min-height: 100vh;
+}
+</style>

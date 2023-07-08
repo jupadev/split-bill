@@ -17,25 +17,54 @@ const handleSubmit = () => {
 </script>
 
 <template>
-  <Form action="" @submit.prevent="handleSubmit">
-    <div class="form-container">
-      <div>
-        <label for="total">Total</label>
-        <input id="total" name="total" type="number" required v-model="total" />
-      </div>
-      <div>
-        <label for="tip">Tip %</label>
-        <input id="tip" name="tip" type="number" required v-model="tip" />
-      </div>
-      <div>
-        <label for="people">Amount of people</label>
-        <input id="people" name="people" type="number" required v-model="people" />
-      </div>
+  <Form action="" @submit.prevent="handleSubmit" class="container">
+    <div class="input-container">
+      <label for="total">Total</label>
+      <input id="total" name="total" min="0" type="number" required v-model="total" class="input" />
+    </div>
+    <div class="input-container">
+      <label for="tip">Tip %</label>
+      <input id="tip" name="tip" type="number" min="0" max="100" required v-model="tip" class="input" />
+    </div>
+    <div class="input-container">
+      <label for="people">Amount of people</label>
+      <input id="people" name="people" min="0" max="100" type="number" required v-model="people" class="input" />
     </div>
     <div>
-      <button type="submit">Calculate</button>
+      <button type="submit" class="form-button">Calculate</button>
     </div>
   </Form>
 </template>
 
-<style scoped></style>
+<style scoped>
+.container {
+  padding: 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(to right, #8360c3, #2ebf91);
+}
+.form-button {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.1em 0.6em;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+}
+
+.input-container {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  width: 100%
+}
+
+.input {
+  height: 2rem;
+  font-size: 1rem;
+  padding: 0 5px;
+}
+</style>

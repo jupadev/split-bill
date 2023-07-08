@@ -25,10 +25,14 @@ import PersonView from './PersonView.vue'
 </template>
 
 <style scoped>
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+}
 .people-container {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  padding: 20px;
 }
 </style>
